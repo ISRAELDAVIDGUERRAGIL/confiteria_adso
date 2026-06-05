@@ -224,8 +224,10 @@ body {
 
 
 .tarjeta1 img{
-    width: 200px;
+    width: 100%;
     height: auto;
+    max-width: 200px;
+    display: block;
 }
 
 .tarjeta1 button{
@@ -243,5 +245,17 @@ body {
     padding: 12px 30px;
     font-size: 15px;
     font-weight: 500;
+    
+    
+}
+
+.btn-producto a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.btn-producto:hover {
+    background-color: #f0f0f0;
+    border-color: #ccc;
     
 }
