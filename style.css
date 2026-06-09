@@ -193,7 +193,7 @@ body {
     justify-content: center;
     padding: 10px;
     max-width: 264px;
-    max-height: 213px;
+    max-height: 270px;
 }
 
 .boton1{
@@ -229,7 +229,7 @@ body {
     width: 100%;
     height: auto;
     max-width: 180px;
-    display: block;
+    display: flex;
     max-height: 231px;
     width: auto;
 }
@@ -290,11 +290,19 @@ body {
 /* parte de los banners*/
 
 .banners{
-
+    height: auto;
+    width: auto;
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
 
 .banners img{
-
+    height: 400px;
+    max-height: 400px;
+    height: auto;
+    width: auto;
+    padding: 10px;
 }
 
 
@@ -326,6 +334,13 @@ body {
     color: #ccc;
 }
 
+.enlaces{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+
 .enlaces h2{
     color: orange;
 }
@@ -342,13 +357,26 @@ body {
     height: auto;
 }
 
+
 .iconos-footer{
-    
+    width: 400px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .iconos-footer img{
-    width: 100px;
+    width: 50px;
     height: auto;
     background-color: aliceblue;
     border-radius: 100%;
+    border-color: #000000;
+    border-style: solid;
+}
+
+.footer hr{
+    color: #008f5a;
+    width: 100px;
 }
