@@ -284,3 +284,71 @@ body {
 
 /* parte del selector del video */
 
+
+
+
+/* parte de los banners*/
+
+.banners{
+
+}
+
+.banners img{
+
+}
+
+
+/* parte del footer*/
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+    background-color: #332f2e;
+    width: 100%;
+    height: 215px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+
+}
+
+.footer a{
+    text-decoration: none;
+    color: #ccc;
+    
+}
+
+.footer h2{
+    text-decoration: none;
+    color: #ccc;
+}
+
+.enlaces h2{
+    color: orange;
+}
+
+
+.logo-footer{
+    right: 30px;
+    bottom: 8px;
+    position: relative;
+}
+
+.logo-footer img {
+    width: 100px;
+    height: auto;
+}
+
+.iconos-footer{
+    
+}
+
+.iconos-footer img{
+    width: 100px;
+    height: auto;
+    background-color: aliceblue;
+    border-radius: 100%;
+}
