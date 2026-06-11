@@ -206,7 +206,6 @@ input {
     gap: 0;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
     width: 420px;
-    height: auto;
 }
 
 /* imagen del producto */
@@ -288,10 +287,6 @@ input {
 
 .btn-producto:hover {
     background-color: #008f5a;
-}
-
-.btn-video {
-    background-color: #00a86b;
 }
 
 /* tarjetas de la seccion de videos */
