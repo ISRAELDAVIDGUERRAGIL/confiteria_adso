@@ -458,7 +458,6 @@ input {
 .footer {
     background-color: #332f2e;
     width: 100%;
-    max-width: 1920px;
     aspect-ratio: 1920 / 602;
     position: relative;
     overflow: hidden;
