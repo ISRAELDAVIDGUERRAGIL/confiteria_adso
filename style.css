@@ -342,7 +342,6 @@ input {
 }
 
 .btn-producto {
-    background-color: #00a86b;
     color: white;
     border: 0 solid #FFF8E7;
     border-radius: 20px;
@@ -634,22 +633,13 @@ input {
 }
 
 .linea1{
-    width: 4.38%;
-    height: 1px;
-}
-
-.linea1{
     position: absolute;
     top: 38.70%;
     left: 23.13%;
     right: 72.50%;
     bottom: 61.13%;
-    background: #DE5900;
-}
-
-.linea2{
-    width: 28.02%;
     height: 1px;
+    background: #DE5900;
 }
 
 .linea2{
@@ -658,13 +648,9 @@ input {
     left: 67.14%;
     right: 4.84%;
     bottom: 41.36%;
+    height: 1px;
     opacity: 0.5;
     background: #D9D9D9;
-}
-
-.linea3{
-    width: 91.30%;
-    height: 1px;
 }
 
 .linea3{
@@ -673,6 +659,7 @@ input {
     left: 4.32%;
     right: 4.38%;
     bottom: 20.60%;
+    height: 1px;
     opacity: 0.5;
     background: #D9D9D9;
 }
