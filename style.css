@@ -695,7 +695,7 @@ input {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.iconos-footer img:nth-child(2) {
+.iconos-footer a:nth-child(2) img {
     width: 63px;
     height: 63px;
     position: absolute;
@@ -705,7 +705,7 @@ input {
     bottom: 156px;
 }
 
-.iconos-footer img:nth-child(4) {
+.iconos-footer a:nth-child(4) img {
     width: 63px;
     height: 63px;
     position: absolute;
@@ -715,7 +715,7 @@ input {
     bottom: 156px;
 }
 
-.iconos-footer img:nth-child(6) {
+.iconos-footer a:nth-child(6) img {
     width: 63px;
     height: 63px;
     position: absolute;
@@ -725,7 +725,7 @@ input {
     bottom: 156px;
 }
 
-.iconos-footer img:nth-child(8) {
+.iconos-footer a:nth-child(8) img {
     width: 63px;
     height: 63px;
     position: absolute;
@@ -733,15 +733,6 @@ input {
     left: 1704px;
     right: 152px;
     bottom: 156px;
-}
-
-.iconos-footer img:not(:nth-child(2)):not(:nth-child(4)):not(:nth-child(6)):not(:nth-child(8)) {
-    width: 50px;
-    height: auto;
-    background-color: aliceblue;
-    border-radius: 100%;
-    border-color: #000000;
-    border-style: solid;
 }
 
 img[alt="icono_contacto"] {
