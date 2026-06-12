@@ -196,17 +196,24 @@ input {
     width: 466px;
     flex-shrink: 0;
     cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    white-space: nowrap;
+    position: relative;
 }
 
-.btn-categorias .flecha {
-    font-size: 20px;
-    font-weight: 400;
+.btn-categorias-texto {
+    position: absolute;
+    top: 28.5px;
+    left: 16px;
+    right: 100px;
+    bottom: 28.5px;
+}
+
+.btn-categorias img {
+    width: 21.568px;
+    position: absolute;
+    top: 26.2px;
+    left: 424px;
+    bottom: 25.2px;
+    right: 34px;
 }
 
 .btn-categorias:hover {
@@ -360,6 +367,7 @@ input {
 }
 
 /* tarjetas de la seccion de videos */
+/* sobrescribe el grid para que sean 3 columnas de 343px en vez de 550px */
 .tarjetas-video {
     gap: 67px;
     grid-template-columns: repeat(3, 343px);
@@ -381,8 +389,8 @@ input {
 }
 
 .tarjeta-video img {
-    max-width: 160px;
-    max-height: 190px;
+    max-width: 208px;
+    max-height: 208px;
 }
 
 .tarjeta-video .info-producto {
@@ -446,6 +454,7 @@ input {
 }
 
 /* parte del footer*/
+/* footer de 1920x602px con fondo oscuro, todos los elementos posicionados absolutamente */
 .footer {
     background-color: #332f2e;
     width: 1920px;
