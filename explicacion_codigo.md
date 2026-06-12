@@ -1,76 +1,91 @@
 # Explicacion del Codigo - Confiteria ADSO
 
 ## Estructura General
+Pagina e-commerce de confiteria. Diseño desktop fijo que se vuelve responsive con media queries.
 
-La pagina tiene un diseño desktop de 1920px. Todas las medidas son fijas (pixeles exactos) para que se vea igual en cualquier pantalla grande.
+---
 
-## Elementos Principales
+### 1. Header
+**Clase:** `.header`
+**Sirve para:** Mostrar logo, buscador e iconos de perfil/carrito
+**Como funciona:** `display: flex` + `justify-content: space-between` separa logo (izquierda), buscador (centro), iconos (derecha)
 
-### 1. Header (Encabezado)
-- **Clase:** `.header`
-- **Funcion:** Barra superior con logo, buscador e iconos
-- **Porque:** Usa `display: flex` con `justify-content: space-between` para separar el logo (izquierda), buscador (centro) e iconos (derecha)
-- **Color:** `#332f2e` (gris oscuro) para contrastar con el contenido blanco
-
-### 2. Botones "DULCES" y "REGALOS"
-- **Clase:** `.botones`, `.dulces`, `.regalos`
-- **Funcion:** Navegacion principal de la tienda
-- **Porque:** Cada boton ocupa el 50% del ancho (`width: 50%`) con flexbox para centrar el texto
+### 2. Botones DULCES / REGALOS
+**Clase:** `.botones`, `.dulces`, `.regalos`
+**Sirve para:** Navegacion principal de categorias
+**Como funciona:** Cada boton ocupa `width: 50%` con flexbox centrando el texto a 36px
 
 ### 3. Carrusel Hero
-- **Clase:** `.hero-carousel`, `.carousel-track`, `.carousel-slide`
-- **Funcion:** 3 banners que rotan automaticamente
-- **Porque:** 
-  - El track mide 300% de ancho (3 slides de 33.333% cada uno)
-  - Usa `animation: slide 12s infinite` con keyframes que mueven el track
-  - Pausa ~30% del tiempo en cada slide antes de avanzar
+**Clase:** `.hero-carousel`, `.carousel-track`, `.carousel-slide`
+**Sirve para:** 3 banners que rotan solos
+**Como funciona:** Track al 300% de ancho (3 slides al 33.333% cada uno). `animation: slide 12s infinite` mueve el track con keyframes. Pausa ~30% en cada slide
 
-### 4. Botones de Navegacion (Categorias)
-- **Clase:** `.navegacion`, `.btn-categorias`, `.btn-nav`
-- **Funcion:** Filtros de productos
-- **Porque:** 
-  - `.navegacion` usa flexbox con `gap: 46px` para separar los botones
-  - `.btn-categorias` tiene texto a la izquierda y flecha a la derecha con `position: absolute`
+### 4. Navegacion (Categorias)
+**Clase:** `.navegacion`, `.btn-categorias`, `.btn-nav`
+**Sirve para:** Botones de filtro "Todas las Categorias", "Preferencial", "Mis Pedidos", "Quienes somos"
+**Como funciona:** Flexbox con `gap: 46px`. `.btn-categorias` tiene texto y flecha con `position: absolute`
 
 ### 5. Tarjetas de Productos
-- **Clase:** `.tarjetas-productos`, `.tarjeta1`
-- **Funcion:** Mostrar productos en una cuadricula
-- **Porque:** 
-  - `display: grid` con `grid-template-columns: repeat(3, 550px)` crea 3 columnas exactas
-  - Cada tarjeta mide 550x632px fijos
-  - Usa `margin-top: auto` en el boton para que siempre quede al fondo
+**Clase:** `.tarjetas-productos`, `.tarjeta1`
+**Sirve para:** Cuadricula de productos con imagen, nombre, precio y boton
+**Como funciona:** `display: grid` con `grid-template-columns: repeat(3, 550px)`. Cada tarjeta mide 550px. `margin-top: auto` en el boton lo empuja al fondo
 
-### 6. Seccion de Video
-- **Clase:** `.video-section`, `.video-container`
-- **Funcion:** Video principal con reproduccion automatica
-- **Porque:** El contenedor tiene `max-width: 1734px` con bordes redondeados y sombra
+### 6. Video
+**Clase:** `.video-section`, `.video-container`
+**Sirve para:** Video principal con autoplay
+**Como funciona:** Contenedor de 1734px con border-radius y box-shadow
 
 ### 7. Tarjetas de Video
-- **Clase:** `.tarjetas-video`, `.tarjeta-video`
-- **Funcion:** Selectores de videos (3 miniaturas)
-- **Porque:** Sobrescribe el grid de productos con `grid-template-columns: repeat(3, 343px)` para tarjetas mas angostas
+**Clase:** `.tarjetas-video`, `.tarjeta-video`
+**Sirve para:** 3 selectores de video
+**Como funciona:** Sobrescribe el grid con `repeat(3, 343px)`. Tarjetas mas angostas que las de producto
 
 ### 8. Banners
-- **Clase:** `.banners`, `.banner-link`
-- **Funcion:** 3 banners verticales promocionales
-- **Porque:** `display: flex` con `flex-direction: column` para apilarlos, cada uno de 1497x499px
+**Clase:** `.banners`, `.banner-link`
+**Sirve para:** 3 banners verticales promocionales
+**Como funciona:** `display: flex; flex-direction: column`. Cada banner 1497x499px
 
-### 9. Footer
-- **Clase:** `.footer`
-- **Funcion:** Pie de pagina con informacion de contacto y navegacion
-- **Porque:** 
-  - Mide 1920x602px fijos con fondo `#332f2e`
-  - Todos los elementos usan `position: absolute` para colocacion exacta por pixeles
-  - El logo mide 291x291px, los textos estan en blanco
-  - Separadores (lineas) decorativas con colores naranja y gris
-  - Iconos de redes sociales con fondo blanco detras (`.fondo_icono`)
+### 9. Footer Desktop
+**Clase:** `.footer`
+**Sirve para:** Pie con logo, navegacion, contacto y redes sociales
+**Como funciona:** `width: 100%` + `aspect-ratio: 1920/602`. Todos los elementos usan `position: absolute` con porcentajes para escalar proporcionalmente. A menos de 1024px se oculta y muestra el footer mobile
 
-## Conceptos Claves Usados
+### 10. Footer Mobile
+**Clase:** `.footer-mobile`
+**Sirve para:** Version responsive del footer
+**Como funciona:** `display: none` por defecto. En tablet/phone (≤1024px) se muestra con `display: flex; flex-direction: column`. Contenido apilado verticalmente
 
-| Concepto | Donde se usa | Porque |
-|----------|-------------|--------|
-| Flexbox | Header, botones DULCES/REGALOS, navegacion, banners | Para alinear elementos en una sola direccion |
-| Grid | Tarjetas de productos y videos | Para crear columnas exactas sin que se envuelvan |
-| Position Absolute | Footer, iconos, texto del boton categorias | Para colocar elementos en pixeles exactos |
-| CSS Animation | Carrusel | Para mover automaticamente las 3 imagenes |
-| Overflow hidden | Carrusel, imagen de fondo | Para ocultar lo que se sale del contenedor |
+---
+
+## Responsive Design (Media Queries)
+
+### Desktop Mediano (1025px - 1750px)
+- Grid productos: `repeat(3, 1fr)` en vez de 550px fijos
+- Banners: 100% de ancho
+- Navegacion: se envuelve si no cabe
+
+### Tablet / iPad Mini (768px - 1024px)
+- Header, botones, carrusel reducidos
+- Grid: `repeat(3, 1fr)`
+- Footer desktop se oculta, se muestra footer mobile
+
+### Phone (≤767px)
+- Header se envuelve, buscador abajo
+- Productos en **2 columnas**: `repeat(2, 1fr)`
+- Navegacion en columna
+- Video cards en 1 columna
+- Footer mobile
+
+---
+
+## Conceptos Clave
+
+| Concepto | Donde se usa | Para que sirve |
+|----------|-------------|----------------|
+| Flexbox | Header, navegacion, banners | Alinear elementos en una direccion |
+| Grid | Tarjetas productos/videos | Crear columnas exactas sin wrap |
+| Position Absolute | Footer, boton categorias | Colocar elementos en posiciones exactas |
+| CSS Animation | Carrusel | Mover 3 imagenes automaticamente |
+| @media queries | Todo el responsive | Cambiar estilos segun el ancho de pantalla |
+| aspect-ratio | Footer | Escalar altura proporcional al ancho |
+| overflow: hidden | Carrusel, footer | Ocultar lo que se sale del contenedor |
