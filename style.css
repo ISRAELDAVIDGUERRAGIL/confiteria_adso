@@ -837,6 +837,62 @@ img[alt="icono_correo"] {
     width: 100px;
 }
 
+/* ========== RESPONSIVE - DESKTOP MEDIANO (1025px a 1750px) ========== */
+@media (max-width: 1750px) and (min-width: 1025px) {
+
+    .navegacion {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .tarjetas-productos {
+        gap: 30px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .tarjeta1 {
+        width: 100%;
+    }
+
+    .tarjeta1 img {
+        width: 200px;
+        height: auto;
+    }
+
+    .video-section {
+        padding: 0 40px;
+    }
+
+    .video-container {
+        height: 500px;
+    }
+
+    .tarjetas-video {
+        gap: 30px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .tarjeta-video {
+        width: 100%;
+        height: auto;
+        padding: 60px 16px 40px;
+    }
+
+    .tarjeta-video img {
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    .banner-link {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer {
+        width: 100%;
+    }
+}
+
 /* ========== RESPONSIVE - TABLET Y IPAD MINI (max 1024px) ========== */
 @media (max-width: 1024px) {
 
