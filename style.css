@@ -880,7 +880,11 @@ img[alt="icono_correo"] {
     }
 
     .footer {
-        width: 100%;
+        display: none;
+    }
+
+    .footer-mobile {
+        display: flex;
     }
 }
 
