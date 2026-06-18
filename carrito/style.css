@@ -2,9 +2,7 @@
 
 /* Estilos propios de carrito */
 
-.carrito-main{
 
-}
 
 .seleccion-productos{
     width: 1000px;
@@ -13,6 +11,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
 }
 
 .carrito-productos img{
@@ -24,4 +23,28 @@
     background-color: white;
     width: 1000px;
     height: 216px;
+}
+
+.producto-info h3{
+    width: 217px;
+    height: 16px;
+    font-size: 24px;
+    font-weight: lighter;
+}
+
+.espacio{
+    height: 20px;
+    width: auto;
+}
+
+.productos-agregar{
+    background-color: white;
+    width: 1000px;
+    height: 640px;
+    display: block;
+}
+
+.producto-agregar img{
+    height: 140px;
+    width: auto;
 }
