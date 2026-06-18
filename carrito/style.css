@@ -1,3 +1,27 @@
 ﻿@import url('../style.css');
 
 /* Estilos propios de carrito */
+
+.carrito-main{
+
+}
+
+.seleccion-productos{
+    width: 1000px;
+    height: 100px;
+    background-color: #FBF0E9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carrito-productos img{
+    height: 154px;
+    width: auto;
+}
+
+.producto{
+    background-color: white;
+    width: 1000px;
+    height: 216px;
+}
