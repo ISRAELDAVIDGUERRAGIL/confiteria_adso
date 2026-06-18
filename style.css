@@ -10,6 +10,14 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer,
+.footer-mobile {
+    margin-top: auto;
 }
 
 /* esconder el scroll */
