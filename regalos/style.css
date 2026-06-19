@@ -1,3 +1,288 @@
 ﻿@import url('../style.css');
 
-/* Estilos propios de regalos */
+/* =========================================
+   HERO IMAGE (banner superior)
+   ========================================= */
+
+.rg-hero {
+    width: 100%;
+    overflow: hidden;
+}
+
+.rg-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================================
+   FONDO de la seccion
+   ========================================= */
+
+.rg-fondo {
+    width: 100%;
+    background-color: #efefef;
+    padding: 53px 0 70px;
+}
+
+/* =========================================
+   NAVEGACION (3 botones)
+   ========================================= */
+
+.rg-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 46px;
+    max-width: 1700px;
+    margin: 0 auto 30px;
+    padding: 0 40px;
+    flex-wrap: wrap;
+}
+
+.rg-nav-btn {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    border: 1.5px solid #d6d6d6;
+    border-radius: 30px;
+    height: 73px;
+    width: 354px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    font-family: 'Montserrat', sans-serif;
+    flex-shrink: 0;
+    transition: background 0.2s, border-color 0.2s;
+    cursor: pointer;
+}
+
+.rg-nav-btn:hover {
+    background-color: #f0f0f0;
+    border-color: #bbb;
+}
+
+/* =========================================
+   TITULO "ELIGE TU TEMATICA"
+   ========================================= */
+
+.rg-titulo {
+    font-size: 64px;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-align: center;
+    margin: 0 0 56px;
+    padding: 0 40px;
+}
+
+/* =========================================
+   GRID 2x2 de canastas
+   ========================================= */
+
+.rg-grid {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    justify-items: center;
+}
+
+/* tarjeta de cada canasta */
+.rg-card {
+    background-color: #d9d9d9;
+    border-radius: 20px;
+    width: 520px;
+    height: 578px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0 35px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.rg-card-img {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    overflow: hidden;
+}
+
+.rg-card-img img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* etiqueta de la canasta (solo 3 de las 4) */
+.rg-label {
+    font-size: 32px;
+    font-weight: 900;
+    text-align: center;
+    margin: 8px 0 18px;
+    letter-spacing: 0.5px;
+    line-height: 1;
+}
+
+.rg-label-amor {
+    background: linear-gradient(90deg, #fd6176 2.885%, #ff0000 99.99%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.rg-label-madre {
+    color: #fc6879;
+}
+
+.rg-label-padre {
+    background: linear-gradient(90deg, #0004ff, #0091cf);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* boton "Comprar canasta" */
+.rg-btn {
+    background-color: #00a06e;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    width: 308px;
+    height: 73px;
+    font-size: 24px;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rg-btn:hover {
+    background-color: #008050;
+}
+
+/* =========================================
+   RESPONSIVE - tablet (max 1024px)
+   ========================================= */
+
+@media (max-width: 1024px) {
+
+    .rg-fondo {
+        padding: 30px 0 50px;
+    }
+
+    .rg-nav {
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .rg-nav-btn {
+        width: 280px;
+        height: 60px;
+        font-size: 22px;
+    }
+
+    .rg-titulo {
+        font-size: 44px;
+        margin-bottom: 36px;
+    }
+
+    .rg-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .rg-card {
+        width: 100%;
+        max-width: 420px;
+        height: 480px;
+    }
+
+    .rg-label {
+        font-size: 24px;
+    }
+
+    .rg-btn {
+        width: 240px;
+        height: 60px;
+        font-size: 18px;
+        border-radius: 16px;
+    }
+}
+
+/* =========================================
+   RESPONSIVE - phone (max 767px)
+   ========================================= */
+
+@media (max-width: 767px) {
+
+    .rg-fondo {
+        padding: 20px 0 40px;
+    }
+
+    .rg-nav {
+        flex-direction: column;
+        gap: 12px;
+        padding: 0 16px;
+        margin-bottom: 20px;
+    }
+
+    .rg-nav-btn {
+        width: 100%;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .rg-titulo {
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+
+    .rg-grid {
+        grid-template-columns: 1fr;
+        padding: 0 16px;
+        gap: 20px;
+    }
+
+    .rg-card {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: 420px;
+        padding: 24px 0 28px;
+    }
+
+    .rg-card-img {
+        min-height: 240px;
+    }
+
+    .rg-label {
+        font-size: 20px;
+        margin: 6px 0 14px;
+    }
+
+    .rg-btn {
+        width: 80%;
+        max-width: 260px;
+        height: 50px;
+        font-size: 16px;
+        border-radius: 14px;
+    }
+}
