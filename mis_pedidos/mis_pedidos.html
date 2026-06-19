@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Mis_pedidos</title>
+    <title>Mis Pedidos</title>
 </head>
 <body>
     <header class="header">
-        <a href="" class="logo">
+        <a href="../index.html" class="logo">
             <img src="../logo.png" alt="Logo ADSO">
         </a>
         <div class="busqueda">
@@ -18,83 +18,127 @@
             </button>
         </div>
         <div class="iconos">
-            <a href="" class="perfil">
+            <a href="../login/login.html" class="perfil">
                 <img src="../icono_perfil.png" alt="Perfil">
             </a>
-            <a href="" class="carrito">
+            <a href="../carrito/carrito.html" class="carrito">
                 <img src="../icono_carrito.png" alt="Carrito">
             </a>
         </div>
     </header>
     <div class="botones">
         <div class="dulces">
-            <a href="">DULCES</a>
+            <a href="../index.html">DULCES</a>
         </div>
         <div class="regalos">
-            <a href="">REGALOS</a>
+            <a href="../regalos/regalos.html">REGALOS</a>
         </div>
     </div>
-    <div class="imagen-fondo">
-    <div>
-    <main>
-        <h1>Mis_pedidos</h1>
-        <div class="ruta">
 
-            <h3>En ruta</h3>
-            <img src="" alt="logo-camion">
+    <div class="mp-fondo">
+        <div>
+            <main class="mp-main">
+                <h1 class="mp-titulo">Seguimiento de pedido</h1>
 
-            <h3>Tu pedido en camino muy pronto lo recibiras</h3>
+                <section class="mp-card mp-card-estado">
+                    <div class="mp-estado-top">
+                        <h2 class="mp-estado-titulo">En Ruta</h2>
+                        <span class="mp-icono-camion" aria-hidden="true">
+                            <img src="../mp-icon-truck.svg" alt="" width="40" height="40">
+                        </span>
+                    </div>
+                    <p class="mp-estado-desc">tu pedido esta en camino muy pronto lo recibiras</p>
 
+                    <div class="mp-timeline">
+                        <div class="mp-timeline-linea" aria-hidden="true">
+                            <div class="mp-timeline-progreso"></div>
+                        </div>
+                        <div class="mp-timeline-pasos">
+                            <div class="mp-paso mp-paso-completado">
+                                <div class="mp-circulo">
+                                    <img src="../mp-icon-check.svg" alt="" width="28" height="28">
+                                </div>
+                                <h3>Pendiente</h3>
+                                <p>31/01/2026 -14:36</p>
+                            </div>
+                            <div class="mp-paso mp-paso-completado">
+                                <div class="mp-circulo">
+                                    <img src="../mp-icon-check.svg" alt="" width="28" height="28">
+                                </div>
+                                <h3>Despachado</h3>
+                                <p>31/02/2026 -10:36</p>
+                            </div>
+                            <div class="mp-paso mp-paso-activo">
+                                <div class="mp-circulo">
+                                    <img src="../mp-icon-truck.svg" alt="" width="34" height="34">
+                                </div>
+                                <h3>En ruta</h3>
+                                <p>31/05/2026 -14:36</p>
+                            </div>
+                            <div class="mp-paso mp-paso-pendiente">
+                                <div class="mp-circulo">
+                                    <img src="../mp-icon-package.svg" alt="" width="32" height="32">
+                                </div>
+                                <h3>Entregado</h3>
+                                <p>Pendiente</p>
+                            </div>
+                        </div>
+                    </div>
 
-            <h3>Pendiente</h3>
+                    <div class="mp-entrega">
+                        <div class="mp-entrega-texto">
+                            <div class="mp-entrega-titulo">
+                                <span class="mp-icono-camion-sm" aria-hidden="true">
+                                    <img src="../mp-icon-truck.svg" alt="" width="30" height="30">
+                                </span>
+                                <h3>Informacion de entrega</h3>
+                            </div>
+                            <p>Tu pedido esta en camino a la direccion de entrega</p>
+                            <p>Tiempo estimado de entrega <strong>31/06/26</strong></p>
+                        </div>
+                        <button class="btn-producto mp-btn-detalles">Ver detalles de envio</button>
+                    </div>
+                </section>
 
-            <h3>Despachado</h3>
+                <section class="mp-card mp-card-detalle">
+                    <div class="mp-detalle-izq">
+                        <h3 class="mp-detalle-titulo">Detalle del pedido</h3>
+                        <div class="mp-detalle-producto">
+                            <div class="mp-canasta">
+                                <img src="mp-canasta.png" alt="Canasta de productos del pedido">
+                            </div>
+                            <div class="mp-detalle-info">
+                                <p class="mp-cantidad">1 Producto</p>
+                                <a href="#" class="mp-ver-productos">Ver detalle de productos</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mp-detalle-der">
+                        <div class="mp-dato">
+                            <p class="mp-dato-label">Fecha del pedido</p>
+                            <p class="mp-dato-valor">31/01/2026 - 12-32</p>
+                        </div>
+                        <div class="mp-dato">
+                            <p class="mp-dato-label">Total pagado</p>
+                            <p class="mp-dato-valor">$ 31.200</p>
+                        </div>
+                    </div>
+                </section>
 
-            <h3>En ruta</h3>
-
-            <h3>Entregado</h3>
-
-            <img src="" alt="logo-camion">
-            <h3>Informacion de entrega</h3>
-
-            <h3>Tu pedido esta en camino a la direccion de entrega</h3>
-            <h3></h3>
-
-            <button>Ver detalles de envio</button>
-
-
+                <section class="mp-card mp-card-soporte">
+                    <div class="mp-soporte-icono">
+                        <img src="mp-soporte-icono.png" alt="Bolsa de ayuda">
+                    </div>
+                    <div class="mp-soporte-texto">
+                        <h3>¿Necesitas ayuda con tu pedido?</h3>
+                        <p>Nuestro equipo esta aqui para ayudarte</p>
+                    </div>
+                    <button class="mp-btn-soporte">Contactar soporte</button>
+                </section>
+            </main>
         </div>
-
-        <div class="detalle del pedido">
-
-            <h3>Detalle del pedido</h3>
-
-            <img src="" alt="icono-canasta">
-
-            <h3>1 producto</h3>
-            <h3>Ver detalle de productos</h3>
-
-            <h3>Fecha del pedido</h3>
-            <h3>31/01/2026 - 12-32</h3>
-
-            <h3>Total pagado</h3>
-            <h3>$ 31.200</h3>
-
-        </div>
-
-        <div class="soporte">
-
-            <img src="" alt="icono-bolsita">
-
-            <h3>¿Necesitas ayuda con tu pedido?</h3>
-            <h3>Nuestro equipo esta aqui para ayudarte</h3>
-
-            <button class="btn-soporte">Contactar soporte</button>
-        </div>
-
-    </main>
     </div>
-    </div>
+
     <footer class="footer">
         <div class="logo-footer">
             <img src="../logo_footer.png" alt="logo">
@@ -107,13 +151,13 @@
             <h2 class="navegacion-titulo">NAVEGACION</h2>
         </div>
         <div class="enlaces">
-            <a class="dulces-link" href="">Dulces</a>
+            <a class="dulces-link" href="../index.html">Dulces</a>
             <div class="punto1"><h2><span>.</span></h2></div>
-            <a class="dulces-link2" href="">Regalos</a>
+            <a class="dulces-link2" href="../regalos/regalos.html">Regalos</a>
             <div class="punto2"><h2><span>.</span></h2></div>
             <a class="dulces-link3" href="">Promociones</a>
             <div class="punto3"><h2><span>.</span></h2></div>
-            <a class="dulces-link4" href="">Quienes somos</a>
+            <a class="dulces-link4" href="../quienes_somos/quienes_somos.html">Quienes somos</a>
         </div>
         <div class="referencias">
             <div><img src="../icono_contacto.png" alt="icono_contacto"></div>
@@ -123,7 +167,7 @@
             <div><img src="../icono_horario.png" alt="icono_horario"></div>
             <h2 class="horario">Lunes a sabado: 8:00 AM - 8:00 PM</h2>
             <div><img src="../icono_correo.png" alt="icono_correo"></div>
-            <a class="correo" href="mailto:adso@gmail.com">adso@confiteriaadso.com</a>
+            <a class="correo" href="mailto:adso@confiteriaadso.com">adso@confiteriaadso.com</a>
         </div>
         <div class="linea2"></div>
         <div class="iconos-footer">
@@ -145,17 +189,17 @@
         <div class="footer-mobile-nav">
             <h3>NAVEGACION</h3>
             <div class="footer-mobile-links">
-                <a href="">Dulces</a>
-                <a href="">Regalos</a>
+                <a href="../index.html">Dulces</a>
+                <a href="../regalos/regalos.html">Regalos</a>
                 <a href="">Promociones</a>
-                <a href="">Quienes somos</a>
+                <a href="../quienes_somos/quienes_somos.html">Quienes somos</a>
             </div>
         </div>
         <div class="footer-mobile-contacto">
             <h3>CONTACTO</h3>
             <p>Calle 123 #45-67, Bogota, Colombia</p>
             <p>Lunes a sabado: 8:00 AM - 8:00 PM</p>
-            <a href="mailto:adso@gmail.com">adso@confiteriaadso.com</a>
+            <a href="mailto:adso@confiteriaadso.com">adso@confiteriaadso.com</a>
         </div>
         <div class="footer-mobile-redes">
             <a href="#"><img src="../icono_twitter.png" alt="twitter"></a>
@@ -166,10 +210,3 @@
     </footer>
 </body>
 </html>
-
-
-
-
-
-
-

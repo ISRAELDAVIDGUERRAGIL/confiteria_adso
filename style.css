@@ -769,10 +769,10 @@ img[alt="icono_correo"] {
 
 .iconos-footer .fondo_icono:nth-of-type(1) {
     position: absolute;
-    top: 64.29%;
-    left: 68.85%;
-    width: 2.86%;
-    height: 9.14%;
+    top: 64.12%;
+    left: 69.15%;
+    width: 2.28%;
+    height: 9.47%;
     background-color: #ffffff;
     border-radius: 50%;
     z-index: 0;
@@ -780,10 +780,10 @@ img[alt="icono_correo"] {
 
 .iconos-footer .fondo_icono:nth-of-type(2) {
     position: absolute;
-    top: 64.29%;
-    left: 75.52%;
-    width: 2.86%;
-    height: 9.14%;
+    top: 64.12%;
+    left: 75.81%;
+    width: 2.28%;
+    height: 9.47%;
     background-color: #ffffff;
     border-radius: 50%;
     z-index: 0;
@@ -791,10 +791,10 @@ img[alt="icono_correo"] {
 
 .iconos-footer .fondo_icono:nth-of-type(3) {
     position: absolute;
-    top: 64.29%;
-    left: 82.29%;
-    width: 2.86%;
-    height: 9.14%;
+    top: 64.12%;
+    left: 82.58%;
+    width: 2.28%;
+    height: 9.47%;
     background-color: #ffffff;
     border-radius: 50%;
     z-index: 0;
@@ -802,10 +802,10 @@ img[alt="icono_correo"] {
 
 .iconos-footer .fondo_icono:nth-of-type(4) {
     position: absolute;
-    top: 64.29%;
-    left: 88.96%;
-    width: 2.86%;
-    height: 9.14%;
+    top: 64.12%;
+    left: 89.25%;
+    width: 2.28%;
+    height: 9.47%;
     background-color: #ffffff;
     border-radius: 50%;
     z-index: 0;
@@ -820,7 +820,98 @@ img[alt="icono_correo"] {
     width: 5.21%;
 }
 
-/* ========== RESPONSIVE - DESKTOP MEDIANO (1025px a 1750px) ========== */
+/* responsive - desktop pequeno (1025px a 1400px) */
+@media (max-width: 1400px) and (min-width: 1025px) {
+
+    .footer .navegacion-titulo,
+    .footer .dulces-link,
+    .footer .dulces-link2,
+    .footer .dulces-link3,
+    .footer .dulces-link4,
+    .contacto,
+    .direccion,
+    .horario,
+    .correo {
+        font-size: 17px;
+    }
+
+    .footer .punto1,
+    .footer .punto2,
+    .footer .punto3 {
+        font-size: 15px;
+    }
+
+    .logo-footer {
+        top: 18%;
+        left: 2%;
+        right: 83%;
+        bottom: 33%;
+    }
+
+    .navegacion-footer {
+        top: 23%;
+        left: 16%;
+        right: 77%;
+        bottom: 53%;
+    }
+
+    .footer .navegacion-titulo {
+        top: 30%;
+    }
+
+    .footer .dulces-link,
+    .footer .dulces-link2,
+    .footer .dulces-link3,
+    .footer .dulces-link4 {
+        top: 47%;
+    }
+
+    .footer .punto1,
+    .footer .punto2,
+    .footer .punto3 {
+        top: 45%;
+    }
+
+    .contacto {
+        top: 11%;
+    }
+
+    .direccion {
+        top: 24%;
+    }
+
+    .horario {
+        top: 34%;
+    }
+
+    .correo {
+        top: 45%;
+    }
+
+    .linea2 {
+        top: 58%;
+    }
+
+    .linea3 {
+        top: 78%;
+    }
+
+    .iconos-footer .fondo_icono {
+        width: 2.28%;
+        height: 9.47%;
+        top: 64.12%;
+    }
+
+    .iconos-footer a:nth-child(2) img,
+    .iconos-footer a:nth-child(4) img,
+    .iconos-footer a:nth-child(6) img,
+    .iconos-footer a:nth-child(8) img {
+        width: 3.28%;
+        height: 10.47%;
+    }
+}
+
+/* responsive - desktop mediano (1025px a 1750px) */
 @media (max-width: 1750px) and (min-width: 1025px) {
 
     .navegacion {
@@ -876,7 +967,7 @@ img[alt="icono_correo"] {
     }
 }
 
-/* ========== RESPONSIVE - TABLET Y IPAD MINI (max 1024px) ========== */
+/* responsive - tablet (max 1024px) */
 @media (max-width: 1024px) {
 
     .header {
@@ -975,12 +1066,9 @@ img[alt="icono_correo"] {
         display: none;
     }
 
-    .footer-mobile {
-        display: flex;
-    }
 }
 
-/* ========== RESPONSIVE - PHONE (max 767px) ========== */
+/* responsive - phone (max 767px) */
 @media (max-width: 767px) {
 
     * {
@@ -1191,14 +1279,11 @@ img[alt="icono_correo"] {
         display: none;
     }
 
-    .footer-mobile {
-        display: flex;
-    }
 }
 
-/* ========== FOOTER MOBILE ========== */
+/* footer mobile */
 .footer-mobile {
-    display: none;
+    display: flex;
     background-color: #332f2e;
     color: #ffffff;
     padding: 40px 20px;
@@ -1263,10 +1348,79 @@ img[alt="icono_correo"] {
     justify-content: center;
 }
 
-.footer-mobile-redes img {
-    width: 40px;
-    height: 40px;
+.footer-mobile-redes a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+}
+
+.footer-mobile-redes a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 98%;
+    height: 98%;
     background-color: #ffffff;
     border-radius: 50%;
-    padding: 5px;
+    z-index: 0;
+}
+
+.footer-mobile-redes img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    background: none;
+    border-radius: 0;
+    padding: 0;
+    object-fit: contain;
+}
+
+@media (min-width: 1024px){
+    .footer-mobile{
+        display: none;
+    }
+}
+
+/* responsive - tablet (max 1024px) - footer */
+@media (max-width: 1024px) and (min-width: 768px) {
+
+    .footer-mobile {
+        padding: 32px 20px;
+        gap: 24px;
+    }
+
+    .footer-mobile-logo img {
+        width: 130px;
+    }
+
+    .footer-mobile-nav h3,
+    .footer-mobile-contacto h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .footer-mobile-links a {
+        font-size: 15px;
+    }
+
+    .footer-mobile-contacto p,
+    .footer-mobile-contacto a {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .footer-mobile-redes {
+        gap: 16px;
+    }
+
+    .footer-mobile-redes a {
+        width: 40px;
+        height: 40px;
+    }
 }

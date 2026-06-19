@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Carrito</title>
+    <title>Tu carrito</title>
 </head>
 <body>
     <header class="header">
-        <a href="" class="logo">
+        <a href="../index.html" class="logo">
             <img src="../logo.png" alt="Logo ADSO">
         </a>
         <div class="busqueda">
@@ -18,170 +18,215 @@
             </button>
         </div>
         <div class="iconos">
-            <a href="" class="perfil">
+            <a href="../login/login.html" class="perfil">
                 <img src="../icono_perfil.png" alt="Perfil">
             </a>
-            <a href="" class="carrito">
+            <a href="carrito.html" class="carrito">
                 <img src="../icono_carrito.png" alt="Carrito">
             </a>
         </div>
     </header>
     <div class="botones">
         <div class="dulces">
-            <a href="">DULCES</a>
+            <a href="../index.html">DULCES</a>
         </div>
         <div class="regalos">
-            <a href="">REGALOS</a>
+            <a href="../regalos/regalos.html">REGALOS</a>
         </div>
     </div>
-    <div class="imagen-fondo">
-    <div>
-    <main class="carrito-main">
-        <h1>Tu Carrito</h1>
-        <div class="seleccion-productos">
-            <div>
-                <input type="checkbox" id="seleccion-productos" name="seleccion-productos" checked />
-                <label for="seleccion-productos">Seleccionar todos los productos</label>
-            </div>
-        </div>
 
-        <div class="carrito-productos">
-            <input type="checkbox" id="producto1" name="producto1" checked />
-            <div class="producto">
-                
-                <img src="../supercoco (1).png" alt="producto1">
-                <div class="producto-info">
-                    <h3>Supercoco Turron</h3>
-                    <h3>Presentacion: 60 unidades</h3>
-                    <h3>Mas vendido</h3>
-                    <div class="producto-cantidad">
-                        <button class="btn-menos">-</button>
-                        <span class="cantidad">1</span>
-                        <button class="btn-menos">+</button>
+    <div class="ct-fondo">
+        <h1 class="ct-titulo">Tu carrito</h1>
+
+        <main class="ct-main">
+            <div class="ct-col-izq">
+                <section class="ct-card ct-card-productos">
+                    <label class="ct-check-todos">
+                        <input type="checkbox" id="ct-todos" checked>
+                        <span>Seleccionar todos los productos (3)</span>
+                    </label>
+
+                    <ul class="ct-lista-productos">
+                        <li class="ct-producto">
+                            <label class="ct-check">
+                                <input type="checkbox" checked>
+                            </label>
+                            <div class="ct-prod-img">
+                                <img src="../supercoco (1).png" alt="Supercoco Turron">
+                            </div>
+                            <div class="ct-prod-info">
+                                <h3>Supercoco Turron</h3>
+                                <p>Presentacion: 50 unidades</p>
+                                <p class="ct-prod-tag">Mas vendido</p>
+                            </div>
+                            <div class="ct-prod-precio">$ 6.000</div>
+                            <div class="ct-cantidad">
+                                <button type="button" aria-label="Restar">−</button>
+                                <span>1</span>
+                                <button type="button" aria-label="Sumar">+</button>
+                            </div>
+                            <button class="ct-btn-trash" aria-label="Eliminar">
+                                <img src="../ct-icon-trash.svg" alt="" width="28" height="28">
+                            </button>
+                        </li>
+
+                        <li class="ct-producto">
+                            <label class="ct-check">
+                                <input type="checkbox" checked>
+                            </label>
+                            <div class="ct-prod-img">
+                                <img src="../bonbonbum(passion_fruit).png" alt="BON BON BUM">
+                            </div>
+                            <div class="ct-prod-info">
+                                <h3>BON BON BUM</h3>
+                                <p>Presentacion: 24 unidades</p>
+                                <p class="ct-prod-tag">Dulces</p>
+                            </div>
+                            <div class="ct-prod-precio">$ 11.000</div>
+                            <div class="ct-cantidad">
+                                <button type="button" aria-label="Restar">−</button>
+                                <span>1</span>
+                                <button type="button" aria-label="Sumar">+</button>
+                            </div>
+                            <button class="ct-btn-trash" aria-label="Eliminar">
+                                <img src="../ct-icon-trash.svg" alt="" width="28" height="28">
+                            </button>
+                        </li>
+
+                        <li class="ct-producto">
+                            <label class="ct-check">
+                                <input type="checkbox" checked>
+                            </label>
+                            <div class="ct-prod-img">
+                                <img src="../trululu.png" alt="Trululu feroz ACIDOS">
+                            </div>
+                            <div class="ct-prod-info">
+                                <h3>Trululu feroz ACIDOS</h3>
+                                <p>Presentacion: 70g</p>
+                                <p class="ct-prod-tag">Dulces</p>
+                            </div>
+                            <div class="ct-prod-precio">$ 5.000</div>
+                            <div class="ct-cantidad">
+                                <button type="button" aria-label="Restar">−</button>
+                                <span>1</span>
+                                <button type="button" aria-label="Sumar">+</button>
+                            </div>
+                            <button class="ct-btn-trash" aria-label="Eliminar">
+                                <img src="../ct-icon-trash.svg" alt="" width="28" height="28">
+                            </button>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="ct-card ct-card-envio">
+                    <div class="ct-envio-top">
+                        <span class="ct-envio-icono" aria-hidden="true">
+                            <img src="../mp-icon-truck.svg" alt="" width="32" height="32">
+                        </span>
+                        <span class="ct-envio-label">Envio</span>
+                        <span class="ct-envio-precio">$ 6.900</span>
                     </div>
-                    
-                </div>
-            </div>
+                    <p class="ct-envio-msg">No podemos enviar gratis tucarrito por peso, tamaño o distancia, pero aprovecha el envio y agrega mas productos</p>
+                </section>
 
-            <div class="producto">
-                <img src="../bonbonbum(passion_fruit).png" alt="producto1">
+                <section class="ct-card ct-card-sugeridos">
+                    <div class="ct-sugeridos-grid">
+                        <article class="ct-sugerido">
+                            <div class="ct-sug-img"><img src="../supercoco (1).png" alt="Supercoco Turron"></div>
+                            <p class="ct-sug-nombre">Supercoco Turron</p>
+                            <p class="ct-sug-precio">$ 11.000</p>
+                            <button class="ct-sug-cart" aria-label="Agregar al carrito">
+                                <img src="../ct-icon-cart.svg" alt="" width="22" height="22">
+                            </button>
+                        </article>
 
-                <div class="producto-info">
-                    <h3>Supercoco Turron</h3>
-                    <h3>Presentacion: 24 unidades</h3>
-                    <h3>Dulces</h3>
-                    <div class="producto-cantidad">
-                        <button class="btn-menos">-</button>
-                        <span class="cantidad">1</span>
-                        <button class="btn-menos">+</button>
+                        <article class="ct-sugerido">
+                            <div class="ct-sug-img"><img src="../mani_moto.png" alt="Mani moto"></div>
+                            <p class="ct-sug-nombre">Mani moto</p>
+                            <p class="ct-sug-precio">$ 12.000</p>
+                            <button class="ct-sug-cart" aria-label="Agregar al carrito">
+                                <img src="../ct-icon-cart.svg" alt="" width="22" height="22">
+                            </button>
+                        </article>
+
+                        <article class="ct-sugerido">
+                            <div class="ct-sug-img"><img src="../polet.png" alt="Rizadas (MAYONESA)"></div>
+                            <p class="ct-sug-nombre">Rizadas (MAYONESA)</p>
+                            <p class="ct-sug-precio">$ 3.000</p>
+                            <button class="ct-sug-cart" aria-label="Agregar al carrito">
+                                <img src="../ct-icon-cart.svg" alt="" width="22" height="22">
+                            </button>
+                        </article>
+
+                        <article class="ct-sugerido">
+                            <div class="ct-sug-img"><img src="../trululu.png" alt="Choclitos (LIMON)"></div>
+                            <p class="ct-sug-nombre">Choclitos (LIMON)</p>
+                            <p class="ct-sug-precio">$ 2.000</p>
+                            <button class="ct-sug-cart" aria-label="Agregar al carrito">
+                                <img src="../ct-icon-cart.svg" alt="" width="22" height="22">
+                            </button>
+                        </article>
+
+                        <article class="ct-sugerido">
+                            <div class="ct-sug-img"><img src="../popetas(mix).png" alt="PoPeTas (MIX)"></div>
+                            <p class="ct-sug-nombre">PoPeTas (MIX)</p>
+                            <p class="ct-sug-precio">$ 8.000</p>
+                            <button class="ct-sug-cart" aria-label="Agregar al carrito">
+                                <img src="../ct-icon-cart.svg" alt="" width="22" height="22">
+                            </button>
+                        </article>
+
+                        <article class="ct-sugerido">
+                            <div class="ct-sug-img"><img src="../gomitas(grisly).png" alt="CARAMELOS"></div>
+                            <p class="ct-sug-nombre">CARAMELOS</p>
+                            <p class="ct-sug-precio">$ 5.000</p>
+                            <button class="ct-sug-cart" aria-label="Agregar al carrito">
+                                <img src="../ct-icon-cart.svg" alt="" width="22" height="22">
+                            </button>
+                        </article>
+
+                        <article class="ct-sugerido">
+                            <div class="ct-sug-img"><img src="../bonbonbum.png" alt="Frunas (ORIGINAL)"></div>
+                            <p class="ct-sug-nombre">Frunas (ORIGINAL)</p>
+                            <p class="ct-sug-precio">$ 4.000</p>
+                            <button class="ct-sug-cart" aria-label="Agregar al carrito">
+                                <img src="../ct-icon-cart.svg" alt="" width="22" height="22">
+                            </button>
+                        </article>
+
+                        <article class="ct-sugerido">
+                            <div class="ct-sug-img"><img src="../merenguitos.png" alt="Merenguitos"></div>
+                            <p class="ct-sug-nombre">Merenguitos</p>
+                            <p class="ct-sug-precio">$ 6.000</p>
+                            <button class="ct-sug-cart" aria-label="Agregar al carrito">
+                                <img src="../ct-icon-cart.svg" alt="" width="22" height="22">
+                            </button>
+                        </article>
                     </div>
-                    
-                </div>
+                </section>
             </div>
 
-            <div class="producto">
-                <img src="../trululu.png" alt="producto1">
+            <aside class="ct-col-der">
+                <section class="ct-card ct-card-resumen">
+                    <h2 class="ct-resumen-titulo">Resumen de compra</h2>
 
-                <div class="producto-info">
-                    <h3>Supercoco Turron</h3>
-                    <h3>Presentacion: 70g</h3>
-                    <h3>Dulces</h3>
-                    <div class="producto-cantidad">
-                        <button class="btn-menos">-</button>
-                        <span class="cantidad">1</span>
-                        <button class="btn-menos">+</button>
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="espacio">
-            </div>
+                    <ul class="ct-resumen-lineas">
+                        <li><span>Productos (6)</span><span>$ 22.000</span></li>
+                        <li><span>Envio</span><span>$ 6.900</span></li>
+                        <li class="ct-resumen-total"><span>Total</span><span>$ 28.900</span></li>
+                    </ul>
 
-            <div class="espacio">
-            </div>
+                    <button class="ct-btn-continuar">Continuar con la compra (3)</button>
+                </section>
 
-            <div class="envio">
-
-            </div>
-
-        </div>
-
-        <div class="resumen-compra">
-
-            <div class="icono-bus">
-
-            </div>
-
-            <h3>Envio</h3>
-            <h3></h3>
-
-        </div>
-
-        <div class="aviso-compra">
-            <h3>
-
-            </h3>
-        </div>
-        
-
-        <div class="productos-agregar">
-
-
-            <div class="producto-agregar">
-                <img src="../supercoco (1).png" alt="">
-                <h2>Supercoco Turron</h2>
-                <button></button>
-            </div>
-
-            
-            <div class="producto-agregar">
-                <img src="../" alt="">
-                <h2>Supercoco Turron</h2>
-                <button></button>
-            </div>
-
-            
-            <div class="producto-agregar">
-                <img src="" alt="">
-                <h2>Supercoco Turron</h2>
-                <button></button>
-            </div>
-
-            
-            <div class="producto-agregar">
-                <img src="" alt="">
-                <h2>Supercoco Turron</h2>
-                <button></button>
-            </div>
-
-            
-            <div class="producto-agregar">
-                <img src="" alt="">
-                <h2>Supercoco Turron</h2>
-                <button></button>
-            </div>
-
-            
-            <div class="producto-agregar">
-                <img src="" alt="">
-                <h2>Supercoco Turron</h2>
-                <button></button>
-            </div>
-
-            
-            <div class="producto-agregar">
-                <img src="" alt="">
-                <h2>Supercoco Turron</h2>
-                <button></button>
-            </div>
-
-
-        </div>
-
-
-    </main>
+                <section class="ct-card ct-card-segura">
+                    <p class="ct-segura-titulo"><span aria-hidden="true">🔒</span> Compra 100% segura</p>
+                    <p class="ct-segura-msg">Tus datos estan protegidos</p>
+                </section>
+            </aside>
+        </main>
     </div>
-    </div>
+
     <footer class="footer">
         <div class="logo-footer">
             <img src="../logo_footer.png" alt="logo">
@@ -194,13 +239,13 @@
             <h2 class="navegacion-titulo">NAVEGACION</h2>
         </div>
         <div class="enlaces">
-            <a class="dulces-link" href="">Dulces</a>
+            <a class="dulces-link" href="../index.html">Dulces</a>
             <div class="punto1"><h2><span>.</span></h2></div>
-            <a class="dulces-link2" href="">Regalos</a>
+            <a class="dulces-link2" href="../regalos/regalos.html">Regalos</a>
             <div class="punto2"><h2><span>.</span></h2></div>
             <a class="dulces-link3" href="">Promociones</a>
             <div class="punto3"><h2><span>.</span></h2></div>
-            <a class="dulces-link4" href="">Quienes somos</a>
+            <a class="dulces-link4" href="../quienes_somos/quienes_somos.html">Quienes somos</a>
         </div>
         <div class="referencias">
             <div><img src="../icono_contacto.png" alt="icono_contacto"></div>
@@ -210,7 +255,7 @@
             <div><img src="../icono_horario.png" alt="icono_horario"></div>
             <h2 class="horario">Lunes a sabado: 8:00 AM - 8:00 PM</h2>
             <div><img src="../icono_correo.png" alt="icono_correo"></div>
-            <a class="correo" href="mailto:adso@gmail.com">adso@confiteriaadso.com</a>
+            <a class="correo" href="mailto:adso@confiteriaadso.com">adso@confiteriaadso.com</a>
         </div>
         <div class="linea2"></div>
         <div class="iconos-footer">
@@ -232,17 +277,17 @@
         <div class="footer-mobile-nav">
             <h3>NAVEGACION</h3>
             <div class="footer-mobile-links">
-                <a href="">Dulces</a>
-                <a href="">Regalos</a>
+                <a href="../index.html">Dulces</a>
+                <a href="../regalos/regalos.html">Regalos</a>
                 <a href="">Promociones</a>
-                <a href="">Quienes somos</a>
+                <a href="../quienes_somos/quienes_somos.html">Quienes somos</a>
             </div>
         </div>
         <div class="footer-mobile-contacto">
             <h3>CONTACTO</h3>
             <p>Calle 123 #45-67, Bogota, Colombia</p>
             <p>Lunes a sabado: 8:00 AM - 8:00 PM</p>
-            <a href="mailto:adso@gmail.com">adso@confiteriaadso.com</a>
+            <a href="mailto:adso@confiteriaadso.com">adso@confiteriaadso.com</a>
         </div>
         <div class="footer-mobile-redes">
             <a href="#"><img src="../icono_twitter.png" alt="twitter"></a>
@@ -253,10 +298,3 @@
     </footer>
 </body>
 </html>
-
-
-
-
-
-
-

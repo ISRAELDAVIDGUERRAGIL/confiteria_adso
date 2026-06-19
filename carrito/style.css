@@ -1,50 +1,596 @@
 ﻿@import url('../style.css');
 
-/* Estilos propios de carrito */
+/* =========================================
+   CARRITO - fondo
+   ========================================= */
 
+.ct-fondo {
+    width: 100%;
+    background-image: url('../carrito-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 233px);
+    padding: 20px 0 80px;
+}
 
+.ct-titulo {
+    font-size: 80px;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-align: center;
+    margin: 30px 0 30px;
+    line-height: 1.1;
+}
 
-.seleccion-productos{
-    width: 1000px;
-    height: 100px;
-    background-color: #FBF0E9;
+/* =========================================
+   LAYOUT PRINCIPAL
+   ========================================= */
+
+.ct-main {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 2.2fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.ct-col-izq,
+.ct-col-der {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    
+    gap: 24px;
 }
 
-.carrito-productos img{
-    height: 154px;
-    width: auto;
+/* =========================================
+   CARDS BASE
+   ========================================= */
+
+.ct-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 28px 36px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
-.producto{
-    background-color: white;
-    width: 1000px;
-    height: 216px;
+/* =========================================
+   CHECKBOX
+   ========================================= */
+
+.ct-check,
+.ct-check-todos {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
 }
 
-.producto-info h3{
-    width: 217px;
-    height: 16px;
-    font-size: 24px;
-    font-weight: lighter;
-}
-
-.espacio{
+.ct-check input[type="checkbox"],
+.ct-check-todos input[type="checkbox"] {
+    width: 20px;
     height: 20px;
-    width: auto;
+    flex-shrink: 0;
+    cursor: pointer;
 }
 
-.productos-agregar{
-    background-color: white;
-    width: 1000px;
-    height: 640px;
+.ct-check-todos {
+    font-size: 18px;
+    color: #1a1a1a;
+    font-weight: 500;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* =========================================
+   CARD PRODUCTOS
+   ========================================= */
+
+.ct-lista-productos {
+    list-style: none;
+    margin-top: 16px;
+}
+
+.ct-producto {
+    display: grid;
+    grid-template-columns: auto 110px 1fr auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "check img info precio trash"
+        "check img cantidad . .";
+    align-items: start;
+    gap: 12px 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.ct-producto .ct-check { grid-area: check; align-self: center; }
+.ct-producto .ct-prod-img { grid-area: img; align-self: center; }
+.ct-producto .ct-prod-info { grid-area: info; }
+.ct-producto .ct-prod-precio { grid-area: precio; align-self: center; text-align: right; margin-top: -10px; }
+.ct-producto .ct-cantidad { grid-area: cantidad; }
+.ct-producto .ct-btn-trash { grid-area: trash; align-self: start; }
+
+.ct-producto:last-child {
+    border-bottom: none;
+}
+
+.ct-prod-img {
+    width: 110px;
+    height: 110px;
+    background: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.ct-prod-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.ct-prod-info h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.ct-prod-info p {
+    font-size: 16px;
+    color: #1a1a1a;
+}
+
+.ct-prod-tag {
+    font-weight: 600;
+}
+
+.ct-prod-precio {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-align: right;
+}
+
+.ct-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    border: 1.5px solid #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 130px;
+}
+
+.ct-cantidad button {
+    background: #ffffff;
+    border: none;
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ct-cantidad button:hover {
+    background: #f0f0f0;
+}
+
+.ct-cantidad span {
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.ct-btn-trash {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ct-btn-trash img {
+    display: block;
+    width: 28px;
+    height: 28px;
+}
+
+.ct-btn-trash:hover img {
+    opacity: 0.7;
+}
+
+/* =========================================
+   CARD ENVIO
+   ========================================= */
+
+.ct-envio-top {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.ct-envio-icono {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.ct-envio-icono img {
+    width: 32px;
+    height: 32px;
     display: block;
 }
 
-.producto-agregar img{
-    height: 140px;
-    width: auto;
+.ct-envio-label {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a1a;
+    flex: 1;
+}
+
+.ct-envio-precio {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.ct-envio-msg {
+    font-size: 18px;
+    line-height: 1.4;
+    color: #1a1a1a;
+    padding-left: 52px;
+}
+
+/* =========================================
+   CARD SUGERIDOS (grid 4x2)
+   ========================================= */
+
+.ct-card-sugeridos {
+    padding: 28px 28px;
+}
+
+.ct-sugeridos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.ct-sugerido {
+    background: #faf5ef;
+    border-radius: 12px;
+    padding: 16px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+    position: relative;
+    border: 1px solid #ede8e0;
+}
+
+.ct-sug-img {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.ct-sug-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.ct-sug-placeholder {
+    background: #f0e0d0;
+    color: #8b6f47;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+
+.ct-sug-nombre {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-top: 4px;
+}
+
+.ct-sug-precio {
+    font-size: 14px;
+    color: #1a1a1a;
+}
+
+.ct-sug-cart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    background: #ff6b1a;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.ct-sug-cart:hover {
+    background: #e55a0f;
+}
+
+.ct-sug-cart img {
+    width: 22px;
+    height: 22px;
+    display: block;
+}
+
+/* =========================================
+   CARD RESUMEN (derecha)
+   ========================================= */
+
+.ct-card-resumen {
+    padding: 28px 32px;
+}
+
+.ct-resumen-titulo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 18px;
+}
+
+.ct-resumen-lineas {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.ct-resumen-lineas li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    color: #1a1a1a;
+}
+
+.ct-resumen-total {
+    font-size: 20px !important;
+    font-weight: 700;
+    padding-top: 14px;
+    border-top: 1px solid #e5e5e5;
+    margin-top: 6px;
+}
+
+.ct-btn-continuar {
+    width: 100%;
+    background: #f5a623;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 10px;
+    height: 68px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.ct-btn-continuar:hover {
+    background: #e09518;
+}
+
+/* =========================================
+   CARD SEGURA
+   ========================================= */
+
+.ct-card-segura {
+    text-align: center;
+    padding: 24px 32px;
+}
+
+.ct-segura-titulo {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 6px;
+}
+
+.ct-segura-msg {
+    font-size: 16px;
+    color: #1a1a1a;
+}
+
+/* responsive - tablet (max 1024px) */
+
+@media (max-width: 1024px) {
+
+    .ct-titulo {
+        font-size: 56px;
+    }
+
+    .ct-main {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .ct-card {
+        padding: 24px 24px;
+    }
+
+    .ct-producto {
+        grid-template-columns: auto 90px 1fr auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "check img info precio trash"
+            "check img cantidad . .";
+        align-items: start;
+        gap: 10px 14px;
+    }
+
+    .ct-producto .ct-check { grid-area: check; align-self: center; }
+    .ct-producto .ct-prod-img { grid-area: img; align-self: center; }
+    .ct-producto .ct-prod-info { grid-area: info; }
+    .ct-producto .ct-prod-precio { grid-area: precio; align-self: center; text-align: right; margin-top: 5px; }
+    .ct-producto .ct-cantidad { grid-area: cantidad; }
+    .ct-producto .ct-btn-trash { grid-area: trash; align-self: start; }
+
+    .ct-prod-img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .ct-prod-info h3 {
+        font-size: 17px;
+    }
+
+    .ct-prod-info p {
+        font-size: 14px;
+    }
+
+    .ct-prod-precio {
+        font-size: 17px;
+    }
+
+    .ct-cantidad {
+        width: 110px;
+    }
+
+    .ct-sugeridos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* responsive - phone (max 767px) */
+
+@media (max-width: 767px) {
+
+    .ct-fondo {
+        padding: 10px 0 40px;
+    }
+
+    .ct-main {
+        padding: 0 14px;
+        gap: 16px;
+    }
+
+    .ct-titulo {
+        font-size: 36px;
+        margin: 16px 0;
+    }
+
+    .ct-card {
+        padding: 18px 16px;
+        border-radius: 10px;
+    }
+
+    .ct-check-todos {
+        font-size: 15px;
+    }
+
+    .ct-producto {
+        grid-template-columns: auto 80px 1fr;
+        grid-template-areas:
+            "check img info"
+            "check img precio"
+            ".    .   cantidad"
+            "trash trash trash";
+        gap: 10px;
+        padding: 14px 0;
+    }
+
+    .ct-producto .ct-check { grid-area: check; }
+    .ct-producto .ct-prod-img { grid-area: img; }
+    .ct-producto .ct-prod-info { grid-area: info; }
+    .ct-producto .ct-prod-precio { grid-area: precio; text-align: left; }
+    .ct-producto .ct-cantidad { grid-area: cantidad; justify-self: start; }
+    .ct-producto .ct-btn-trash { grid-area: trash; justify-self: end; }
+
+    .ct-prod-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .ct-prod-info h3 {
+        font-size: 15px;
+    }
+
+    .ct-prod-info p {
+        font-size: 13px;
+    }
+
+    .ct-prod-precio {
+        font-size: 15px;
+    }
+
+    .ct-envio-top {
+        gap: 10px;
+    }
+
+    .ct-envio-label,
+    .ct-envio-precio {
+        font-size: 16px;
+    }
+
+    .ct-envio-msg {
+        font-size: 13px;
+        padding-left: 0;
+    }
+
+    .ct-sugeridos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .ct-sug-img {
+        height: 100px;
+    }
+
+    .ct-resumen-titulo {
+        font-size: 18px;
+    }
+
+    .ct-resumen-lineas li {
+        font-size: 15px;
+    }
+
+    .ct-btn-continuar {
+        height: 50px;
+        font-size: 15px;
+    }
+
+    .ct-segura-titulo {
+        font-size: 15px;
+    }
+
+    .ct-segura-msg {
+        font-size: 13px;
+    }
 }

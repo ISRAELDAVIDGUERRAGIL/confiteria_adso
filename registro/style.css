@@ -1,3 +1,245 @@
 ﻿@import url('../style.css');
 
-/* Estilos propios de registro */
+/* =========================================
+   REGISTRO - fondo
+   ========================================= */
+
+.reg-fondo {
+    width: 100%;
+    background-image: url('../registro-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 159px);
+    padding: 60px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.reg-main {
+    width: 100%;
+    max-width: 1700px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: center;
+}
+
+/* =========================================
+   CARD
+   ========================================= */
+
+.reg-card {
+    background: #ffffff;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 1083px;
+    padding: 50px 230px 60px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+}
+
+.reg-card-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.reg-titulo-fila {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.reg-icono-user {
+    display: inline-flex;
+}
+
+.reg-titulo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 6px;
+}
+
+.reg-subtitulo {
+    font-size: 18px;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+/* =========================================
+   FORM
+   ========================================= */
+
+.reg-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 608px;
+    margin: 0 auto;
+}
+
+.reg-fila {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.reg-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.reg-campo label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.reg-campo input {
+    width: 100%;
+    height: 43px;
+    border: 1.5px solid #1a1a1a;
+    border-radius: 6px;
+    padding: 0 16px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: #1a1a1a;
+    background: #ffffff;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.reg-campo input:focus {
+    border-color: #00A06E;
+}
+
+.reg-edad {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 4px;
+}
+
+.reg-edad input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #00A06E;
+    cursor: pointer;
+    margin: 0;
+}
+
+.reg-edad label {
+    font-size: 16px;
+    color: #1a1a1a;
+    cursor: pointer;
+}
+
+.reg-ayuda {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1a1a1a;
+    text-align: justify;
+    margin-top: 4px;
+}
+
+.reg-btn {
+    width: 100%;
+    max-width: 319px;
+    height: 44px;
+    font-size: 18px;
+    border-radius: 22px;
+    margin: 14px auto 0;
+    display: block;
+}
+
+/* responsive - tablet (max 1024px) */
+
+@media (max-width: 1024px) {
+
+    .reg-fondo {
+        padding: 40px 0;
+    }
+
+    .reg-card {
+        padding: 50px 80px;
+    }
+
+    .reg-fila {
+        gap: 18px;
+    }
+}
+
+/* responsive - phone (max 767px) */
+
+@media (max-width: 767px) {
+
+    .reg-fondo {
+        padding: 20px 0;
+    }
+
+    .reg-main {
+        padding: 0 16px;
+    }
+
+    .reg-card {
+        padding: 32px 22px;
+        border-radius: 12px;
+    }
+
+    .reg-card-top {
+        margin-bottom: 22px;
+    }
+
+    .reg-titulo {
+        font-size: 20px;
+    }
+
+    .reg-subtitulo {
+        font-size: 15px;
+    }
+
+    .reg-icono-user svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .reg-form {
+        gap: 16px;
+    }
+
+    .reg-fila {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .reg-campo label {
+        font-size: 15px;
+    }
+
+    .reg-campo input {
+        height: 42px;
+        font-size: 15px;
+    }
+
+    .reg-edad label {
+        font-size: 14px;
+    }
+
+    .reg-ayuda {
+        font-size: 13px;
+    }
+
+    .reg-btn {
+        max-width: 100%;
+        height: 44px;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+}

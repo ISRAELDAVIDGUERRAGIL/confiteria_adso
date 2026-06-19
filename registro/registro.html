@@ -8,7 +8,7 @@
 </head>
 <body>
     <header class="header">
-        <a href="" class="logo">
+        <a href="../index.html" class="logo">
             <img src="../logo.png" alt="Logo ADSO">
         </a>
         <div class="busqueda">
@@ -18,29 +18,74 @@
             </button>
         </div>
         <div class="iconos">
-            <a href="" class="perfil">
+            <a href="../login/login.html" class="perfil">
                 <img src="../icono_perfil.png" alt="Perfil">
             </a>
-            <a href="" class="carrito">
+            <a href="../carrito/carrito.html" class="carrito">
                 <img src="../icono_carrito.png" alt="Carrito">
             </a>
         </div>
     </header>
-    <div class="botones">
-        <div class="dulces">
-            <a href="">DULCES</a>
-        </div>
-        <div class="regalos">
-            <a href="">REGALOS</a>
-        </div>
+
+    <div class="reg-fondo">
+        <main class="reg-main">
+            <div class="reg-card">
+                <div class="reg-card-top">
+                    <div class="reg-titulo-fila">
+                        <span class="reg-icono-user" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" width="36" height="36" fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="18" cy="16" r="7"/>
+                                <path d="M5 40 a13 13 0 0 1 26 0"/>
+                                <line x1="34" y1="14" x2="44" y2="14"/>
+                                <line x1="39" y1="9" x2="39" y2="19"/>
+                            </svg>
+                        </span>
+                        <h1 class="reg-titulo">Crear cuenta</h1>
+                    </div>
+                    <p class="reg-subtitulo">Completa tus datos para registrarte</p>
+                </div>
+
+                <form class="reg-form" action="#" method="post">
+                    <div class="reg-fila">
+                        <div class="reg-campo">
+                            <label for="nombres">Nombres</label>
+                            <input type="text" id="nombres" name="nombres">
+                        </div>
+                        <div class="reg-campo">
+                            <label for="apellidos">Apellidos</label>
+                            <input type="text" id="apellidos" name="apellidos">
+                        </div>
+                    </div>
+
+                    <div class="reg-fila">
+                        <div class="reg-campo">
+                            <label for="correo">Correos Electronicos</label>
+                            <input type="email" id="correo" name="correo">
+                        </div>
+                        <div class="reg-campo">
+                            <label for="telefono">Numero telefonico</label>
+                            <input type="tel" id="telefono" name="telefono">
+                        </div>
+                    </div>
+
+                    <div class="reg-campo reg-campo-full">
+                        <label for="direccion">Direccion de envio</label>
+                        <input type="text" id="direccion" name="direccion">
+                    </div>
+
+                    <div class="reg-edad">
+                        <input type="checkbox" id="edad" name="edad">
+                        <label for="edad">Edad / Mayoria de edad</label>
+                    </div>
+
+                    <p class="reg-ayuda">Al registrarte, generamos automaticamente tu usuario y contraseña. los cuales recibiras en tu correo electronico</p>
+
+                    <button type="submit" class="btn-producto reg-btn">Registrarme</button>
+                </form>
+            </div>
+        </main>
     </div>
-    <div class="imagen-fondo">
-    <div>
-    <main>
-        <h1>Registro</h1>
-    </main>
-    </div>
-    </div>
+
     <footer class="footer">
         <div class="logo-footer">
             <img src="../logo_footer.png" alt="logo">
@@ -53,13 +98,13 @@
             <h2 class="navegacion-titulo">NAVEGACION</h2>
         </div>
         <div class="enlaces">
-            <a class="dulces-link" href="">Dulces</a>
+            <a class="dulces-link" href="../index.html">Dulces</a>
             <div class="punto1"><h2><span>.</span></h2></div>
-            <a class="dulces-link2" href="">Regalos</a>
+            <a class="dulces-link2" href="../regalos/regalos.html">Regalos</a>
             <div class="punto2"><h2><span>.</span></h2></div>
             <a class="dulces-link3" href="">Promociones</a>
             <div class="punto3"><h2><span>.</span></h2></div>
-            <a class="dulces-link4" href="">Quienes somos</a>
+            <a class="dulces-link4" href="../quienes_somos/quienes_somos.html">Quienes somos</a>
         </div>
         <div class="referencias">
             <div><img src="../icono_contacto.png" alt="icono_contacto"></div>
@@ -69,7 +114,7 @@
             <div><img src="../icono_horario.png" alt="icono_horario"></div>
             <h2 class="horario">Lunes a sabado: 8:00 AM - 8:00 PM</h2>
             <div><img src="../icono_correo.png" alt="icono_correo"></div>
-            <a class="correo" href="mailto:adso@gmail.com">adso@confiteriaadso.com</a>
+            <a class="correo" href="mailto:adso@confiteriaadso.com">adso@confiteriaadso.com</a>
         </div>
         <div class="linea2"></div>
         <div class="iconos-footer">
@@ -91,17 +136,17 @@
         <div class="footer-mobile-nav">
             <h3>NAVEGACION</h3>
             <div class="footer-mobile-links">
-                <a href="">Dulces</a>
-                <a href="">Regalos</a>
+                <a href="../index.html">Dulces</a>
+                <a href="../regalos/regalos.html">Regalos</a>
                 <a href="">Promociones</a>
-                <a href="">Quienes somos</a>
+                <a href="../quienes_somos/quienes_somos.html">Quienes somos</a>
             </div>
         </div>
         <div class="footer-mobile-contacto">
             <h3>CONTACTO</h3>
             <p>Calle 123 #45-67, Bogota, Colombia</p>
             <p>Lunes a sabado: 8:00 AM - 8:00 PM</p>
-            <a href="mailto:adso@gmail.com">adso@confiteriaadso.com</a>
+            <a href="mailto:adso@confiteriaadso.com">adso@confiteriaadso.com</a>
         </div>
         <div class="footer-mobile-redes">
             <a href="#"><img src="../icono_twitter.png" alt="twitter"></a>
@@ -112,10 +157,3 @@
     </footer>
 </body>
 </html>
-
-
-
-
-
-
-

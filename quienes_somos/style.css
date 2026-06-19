@@ -1,3 +1,301 @@
 ﻿@import url('../style.css');
 
-/* Estilos propios de quienes_somos */
+/* =========================================
+   HERO IMAGE (Quienés somos banner)
+   ========================================= */
+
+.qs-hero {
+    width: 100%;
+    overflow: hidden;
+    background: #fce8e8;
+}
+
+.qs-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================================
+   FONDO (patrón de flores)
+   ========================================= */
+
+.qs-fondo {
+    width: 100%;
+    background-image: url('../quienes-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px 0 80px;
+    min-height: calc(100vh - 233px);
+}
+
+.qs-main {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* =========================================
+   CARDS SUPERIORES (Mision, Vision, Descripcion)
+   ========================================= */
+
+.qs-cards-superiores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.qs-card {
+    background: #F9F0E4;
+    border-radius: 16px;
+    padding: 21px 36px 30px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.qs-card-titulo {
+    font-size: 40px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 16px;
+    padding-bottom: 0;
+}
+
+.qs-linea {
+    width: 188px;
+    height: 6px;
+    background: #ff8a8a;
+    border: none;
+    margin: 0 0 8px 0;
+}
+
+.qs-card-contenido {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    margin-top: 0;
+}
+
+.qs-card-icono {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+}
+
+.qs-card-contenido p {
+    font-size: 16px;
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    flex: 1;
+}
+
+/* =========================================
+   CARDS MEDIAS (Historia + Valores)
+   ========================================= */
+
+.qs-cards-medias {
+    display: grid;
+    grid-template-columns: 1fr 1.28fr;
+    gap: 30px;
+}
+
+.qs-card-historia {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 616px;
+    height: 360px;
+}
+
+.qs-historia-texto {
+    font-size: 16px;
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: justify;
+}
+
+.qs-historia-fecha {
+    font-size: 15px;
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: auto;
+}
+
+.qs-card-valores {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 787px;
+    height: 360px;
+}
+
+.qs-valores-grid {
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+    margin-top: 0;
+}
+
+.qs-valor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 140px;
+}
+
+.qs-valor-icono {
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    background: #F7DCCE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 13px;
+}
+
+.qs-valor-icono img,
+.qs-valor-icono svg {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.qs-emoji {
+    font-size: 48px;
+    line-height: 1;
+}
+
+.qs-valor h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    line-height: normal;
+    margin-bottom: 2px;
+}
+
+.qs-valor p {
+    font-size: 14px;
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 120px;
+}
+
+/* =========================================
+   MAPA
+   ========================================= */
+
+.qs-mapa {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.qs-mapa iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    display: block;
+    border: 0;
+}
+
+/* responsive - tablet (max 1024px) */
+
+@media (max-width: 1024px) {
+
+    .qs-main {
+        padding: 0 24px;
+    }
+
+    .qs-cards-superiores {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .qs-cards-medias {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .qs-valores-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    .qs-card-titulo {
+        font-size: 34px;
+    }
+}
+
+/* responsive - phone (max 767px) */
+
+@media (max-width: 767px) {
+
+    .qs-fondo {
+        padding: 20px 0 40px;
+    }
+
+    .qs-main {
+        padding: 0 16px;
+        gap: 20px;
+    }
+
+    .qs-cards-superiores,
+    .qs-cards-medias {
+        gap: 16px;
+    }
+
+    .qs-card {
+        padding: 22px 20px;
+        border-radius: 12px;
+    }
+
+    .qs-card-titulo {
+        font-size: 28px;
+    }
+
+    .qs-card-contenido p,
+    .qs-historia-texto {
+        font-size: 14px;
+    }
+
+    .qs-valores-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .qs-valor-icono {
+        width: 64px;
+        height: 64px;
+    }
+
+    .qs-valor h4 {
+        font-size: 14px;
+    }
+
+    .qs-valor p {
+        font-size: 12px;
+    }
+}
