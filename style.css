@@ -99,10 +99,6 @@ input {
     align-items: center;
 }
 
-.perfil {
-    margin-right: 0;
-}
-
 .perfil img,
 .carrito img {
     width: 90px;
@@ -197,7 +193,6 @@ input {
     border-radius: 30px;
     padding: 0 16px;
     font-size: 32px;
-    font-style: normal;
     font-weight: 800;
     line-height: 16px;
     height: 73px;
@@ -351,7 +346,7 @@ input {
 
 .btn-producto {
     color: white;
-    border: 0 solid #FFF8E7;
+    border: none;
     border-radius: 20px;
     font-size: 24px;
     font-weight: 800;
@@ -409,7 +404,6 @@ input {
     height: 50px;
     padding: 0;
     font-size: 24px;
-    font-style: normal;
     font-weight: 800;
 }
 
@@ -491,13 +485,6 @@ input {
     left: 22.92%;
     right: 68.18%;
     bottom: 64.45%;
-}
-
-.enlaces {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
 }
 
 .enlaces h2 {
@@ -597,7 +584,6 @@ input {
     position: absolute;
     top: 45.85%;
     font-size: 20px;
-    color: #d85704;
 }
 
 .footer .punto1 {
@@ -672,19 +658,8 @@ input {
     background: #D9D9D9;
 }
 
-.referencias {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.iconos-footer {
-    width: 20.83%;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+.iconos-footer img {
+    z-index: 1;
 }
 
 .iconos-footer a:nth-child(2) img {
@@ -813,11 +788,6 @@ img[alt="icono_correo"] {
 
 .iconos-footer img {
     z-index: 1;
-}
-
-.footer hr {
-    color: #008f5a;
-    width: 5.21%;
 }
 
 /* responsive - desktop pequeno (1025px a 1400px) */

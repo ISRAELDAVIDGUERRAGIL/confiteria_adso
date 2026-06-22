@@ -300,19 +300,6 @@
     object-fit: contain;
 }
 
-.ct-sug-placeholder {
-    background: #f0e0d0;
-    color: #8b6f47;
-    font-size: 16px;
-    font-weight: 700;
-    text-align: center;
-    line-height: 1.1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px;
-}
-
 .ct-sug-nombre {
     font-size: 15px;
     font-weight: 600;

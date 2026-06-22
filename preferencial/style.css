@@ -30,66 +30,8 @@
 }
 
 /* =========================================
-   NAVEGACION (4 botones)
-   ========================================= */
-
-.pr-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 46px;
-    max-width: 1700px;
-    margin: 0 auto 30px;
-    padding: 0 40px;
-    flex-wrap: wrap;
-}
-
-.pr-nav-btn {
-    background: #ffffff;
-    color: #1a1a1a;
-    border: 1.5px solid #d6d6d6;
-    border-radius: 30px;
-    height: 73px;
-    width: 354px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    font-size: 32px;
-    font-weight: 600;
-    text-decoration: none;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
-    font-family: 'Montserrat', sans-serif;
-    flex-shrink: 0;
-    transition: background 0.2s, border-color 0.2s;
-    cursor: pointer;
-}
-
-.pr-nav-btn:hover {
-    background-color: #f0f0f0;
-    border-color: #bbb;
-}
-
-.pr-nav-categorias {
-    background-color: #00a86b;
-    color: #ffffff;
-    border-color: #00a86b;
-}
-
-.pr-nav-categorias:hover {
-    background-color: #008f5a;
-    border-color: #008f5a;
-}
-
-.pr-nav-activa {
-    background-color: #ffffff;
-    color: #1a1a1a;
-    border: 2px solid #00a86b;
-}
-
-/* =========================================
-   GRID DE PRODUCTOS (3x3)
-   ========================================= */
+    GRID DE PRODUCTOS (3x3)
+    ========================================= */
 
 .pr-main {
     max-width: 1700px;
@@ -128,20 +70,6 @@
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-}
-
-.pr-placeholder {
-    background: #f5e8c8;
-    color: #8b6f47;
-    font-size: 22px;
-    font-weight: 700;
-    text-align: center;
-    line-height: 1.1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
-    border-radius: 12px;
 }
 
 .pr-nombre {
@@ -203,16 +131,6 @@
 
 @media (max-width: 1024px) {
 
-    .pr-nav {
-        gap: 20px;
-    }
-
-    .pr-nav-btn {
-        width: 280px;
-        height: 60px;
-        font-size: 22px;
-    }
-
     .pr-main {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
@@ -256,19 +174,6 @@
         padding: 16px 0 40px;
     }
 
-    .pr-nav {
-        flex-direction: column;
-        gap: 12px;
-        padding: 0 16px;
-        margin-bottom: 16px;
-    }
-
-    .pr-nav-btn {
-        width: 100%;
-        height: 50px;
-        font-size: 16px;
-    }
-
     .pr-main {
         grid-template-columns: 1fr;
         padding: 0 16px;
@@ -305,9 +210,5 @@
         max-width: 100%;
         height: 46px;
         font-size: 15px;
-    }
-
-    .pr-placeholder {
-        font-size: 18px;
     }
 }

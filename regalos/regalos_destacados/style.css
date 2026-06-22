@@ -1,0 +1,666 @@
+﻿@import url('../../style.css');
+
+/* =========================================
+   HERO IMAGE (banner superior)
+   ========================================= */
+
+.rd-hero {
+    width: 100%;
+    overflow: hidden;
+}
+
+.rd-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================================
+   FONDO de la seccion
+   ========================================= */
+
+.rd-fondo {
+    width: 100%;
+    background-color: #efefef;
+    padding: 30px 0 70px;
+}
+
+/* =========================================
+   NAVEGACION (4 botones)
+   ========================================= */
+
+.rd-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 46px;
+    max-width: 1700px;
+    margin: 0 auto 30px;
+    padding: 0 40px;
+    flex-wrap: wrap;
+}
+
+.rd-nav-btn {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    border: 1.5px solid #d6d6d6;
+    border-radius: 30px;
+    height: 73px;
+    width: 354px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    font-family: 'Montserrat', sans-serif;
+    flex-shrink: 0;
+    transition: background 0.2s, border-color 0.2s;
+    cursor: pointer;
+}
+
+.rd-nav-btn:hover {
+    background-color: #f0f0f0;
+    border-color: #bbb;
+}
+
+.rd-nav-regresar {
+    background-color: #00a86b;
+    color: #ffffff;
+    border-color: #00a86b;
+    gap: 12px;
+}
+
+.rd-nav-regresar:hover {
+    background-color: #008f5a;
+    border-color: #008f5a;
+}
+
+.rd-nav-regresar img {
+    width: 21px;
+    height: auto;
+    transform: rotate(180deg);
+}
+
+/* =========================================
+   PASOS
+   ========================================= */
+
+.rd-pasos {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0;
+    max-width: 1700px;
+    margin: 0 auto 30px;
+    padding: 0 40px;
+}
+
+.rd-paso {
+    flex: 1;
+    background-color: #ffffff;
+    border: 1px solid #d6d6d6;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 30px;
+    min-height: 118px;
+}
+
+.rd-paso:first-child {
+    border-radius: 12px 0 0 12px;
+}
+
+.rd-paso:last-child {
+    border-radius: 0 12px 12px 0;
+}
+
+.rd-paso-activo {
+    background-color: #f5f5f5;
+}
+
+.rd-paso-numero {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.rd-paso-numero img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.rd-paso-texto {
+    font-size: 24px;
+    color: #1a1a1a;
+    line-height: 1.2;
+}
+
+.rd-paso-titulo {
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+/* =========================================
+   CREADOR DE CANASTAS
+   ========================================= */
+
+.rd-creador {
+    display: flex;
+    gap: 30px;
+    max-width: 1700px;
+    margin: 0 auto 60px;
+    padding: 0 40px;
+}
+
+/* --- Sidebar TU CANASTA --- */
+
+.rd-canasta {
+    background-color: #d4d2d2;
+    border-radius: 12px;
+    width: 506px;
+    flex-shrink: 0;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.rd-canasta-titulo {
+    font-size: 32px;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.rd-canasta-imagen {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.rd-canasta-imagen img {
+    max-width: 220px;
+    height: auto;
+    object-fit: contain;
+}
+
+.rd-canasta-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.rd-canasta-item {
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.rd-canasta-item img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.rd-canasta-info {
+    flex: 1;
+}
+
+.rd-canasta-nombre {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.rd-canasta-sabor {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.rd-canasta-precio {
+    font-size: 18px;
+    font-weight: 900;
+    color: #1a1a1a;
+}
+
+.rd-canasta-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.rd-cantidad-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 8px;
+    background-color: #fde8ae;
+    color: #1a1a1a;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rd-canasta-total {
+    margin-top: auto;
+    padding-top: 16px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.rd-canasta-total span {
+    font-weight: 900;
+}
+
+.rd-canasta-botones {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.rd-btn-confirmar {
+    flex: 1;
+    background-color: #00a86b;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    height: 45px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.rd-btn-confirmar:hover {
+    background-color: #008f5a;
+}
+
+.rd-btn-preview {
+    flex: 1;
+    background-color: #ff4444;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    height: 45px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.rd-btn-preview:hover {
+    background-color: #dd3333;
+}
+
+/* --- Grid de productos --- */
+
+.rd-productos {
+    flex: 1;
+    background-color: #d9d9d9;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.rd-productos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.rd-productos-titulo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.rd-productos-contador {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.rd-productos-filtros {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.rd-filtro-btn {
+    background-color: #00a86b;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    padding: 0 20px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rd-filtro-btn img {
+    width: 14px;
+    height: auto;
+    transform: rotate(180deg);
+}
+
+.rd-productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.rd-producto {
+    background-color: #efefef;
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+}
+
+.rd-producto img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.rd-producto-info {
+    flex: 1;
+}
+
+.rd-producto-nombre {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.rd-producto-sabor {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a1a1a;
+    min-height: 18px;
+    margin-bottom: 4px;
+}
+
+.rd-producto-precio {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.rd-producto-add {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 8px;
+    background-color: #fde8ae;
+    color: #1a1a1a;
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================================
+   REGALOS DESTACADOS
+   ========================================= */
+
+.rd-destacados {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.rd-destacados-titulo {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.rd-destacados-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.rd-destacado-card {
+    background-color: #d9d9d9;
+    border-radius: 20px;
+    padding: 30px 0 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.rd-destacado-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    min-height: 240px;
+}
+
+.rd-destacado-img img {
+    max-width: 100%;
+    max-height: 260px;
+    object-fit: contain;
+}
+
+.rd-destacado-info {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.rd-destacado-info h3 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.rd-destacado-info p {
+    font-size: 20px;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.rd-destacado-precio {
+    font-size: 24px;
+    font-weight: 900;
+    color: #1a1a1a;
+}
+
+.rd-destacado-btn {
+    background-color: #00a06e;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    width: 220px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.2s;
+}
+
+.rd-destacado-btn:hover {
+    background-color: #008050;
+}
+
+/* =========================================
+   RESPONSIVE - tablet (max 1024px)
+   ========================================= */
+
+@media (max-width: 1024px) {
+
+    .rd-nav {
+        gap: 20px;
+    }
+
+    .rd-nav-btn {
+        width: 220px;
+        height: 60px;
+        font-size: 22px;
+    }
+
+    .rd-pasos {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .rd-paso {
+        border-radius: 12px !important;
+    }
+
+    .rd-creador {
+        flex-direction: column;
+    }
+
+    .rd-canasta {
+        width: 100%;
+    }
+
+    .rd-productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .rd-destacados-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+/* =========================================
+   RESPONSIVE - phone (max 767px)
+   ========================================= */
+
+@media (max-width: 767px) {
+
+    .rd-fondo {
+        padding: 20px 0 40px;
+    }
+
+    .rd-nav {
+        flex-direction: column;
+        gap: 12px;
+        padding: 0 16px;
+    }
+
+    .rd-nav-btn {
+        width: 100%;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .rd-pasos {
+        padding: 0 16px;
+    }
+
+    .rd-paso {
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .rd-paso-numero {
+        width: 50px;
+        height: 50px;
+    }
+
+    .rd-paso-texto {
+        font-size: 18px;
+    }
+
+    .rd-creador {
+        padding: 0 16px;
+        gap: 20px;
+    }
+
+    .rd-canasta {
+        padding: 16px;
+    }
+
+    .rd-canasta-titulo {
+        font-size: 24px;
+    }
+
+    .rd-canasta-imagen img {
+        max-width: 160px;
+    }
+
+    .rd-productos {
+        padding: 16px;
+    }
+
+    .rd-productos-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .rd-productos-titulo {
+        font-size: 20px;
+    }
+
+    .rd-productos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rd-destacados {
+        padding: 0 16px;
+    }
+
+    .rd-destacados-titulo {
+        font-size: 32px;
+    }
+
+    .rd-destacados-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .rd-destacado-img {
+        min-height: 200px;
+    }
+}
