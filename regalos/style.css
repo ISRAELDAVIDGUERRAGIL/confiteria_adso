@@ -134,6 +134,14 @@
     line-height: 1;
 }
 
+.rg-label-destacados {
+    background: linear-gradient(#000000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
 .rg-label-amor {
     background: linear-gradient(90deg, #fd6176 2.885%, #ff0000 99.99%);
     -webkit-background-clip: text;

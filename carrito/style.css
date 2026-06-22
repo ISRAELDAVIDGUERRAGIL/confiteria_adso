@@ -49,8 +49,7 @@
    ========================================= */
 
 .ct-card {
-    background: #ffffff;
-    border-radius: 12px;
+    background: #F9F9F9 ;
     padding: 28px 36px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
@@ -80,7 +79,8 @@
     font-size: 18px;
     color: #1a1a1a;
     font-weight: 500;
-    padding-bottom: 16px;
+    padding-top: 20px;
+    padding-bottom: 42px;
     border-bottom: 1px solid #e5e5e5;
 }
 
@@ -272,8 +272,7 @@
 }
 
 .ct-sugerido {
-    background: #faf5ef;
-    border-radius: 12px;
+    background-color: #F4E3D1;
     padding: 16px 12px;
     display: flex;
     flex-direction: column;
@@ -282,6 +281,9 @@
     gap: 6px;
     position: relative;
     border: 1px solid #ede8e0;
+    width: 225px;
+    height: 280px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 .ct-sug-img {
@@ -304,12 +306,14 @@
     font-size: 15px;
     font-weight: 600;
     color: #1a1a1a;
-    margin-top: 4px;
+    margin-top: 40px;
 }
 
 .ct-sug-precio {
     font-size: 14px;
     color: #1a1a1a;
+    margin-top: 10px;
+    font-weight: 600;
 }
 
 .ct-sug-cart {

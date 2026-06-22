@@ -93,31 +93,50 @@
     align-items: stretch;
     gap: 0;
     max-width: 1700px;
-    margin: 0 auto 30px;
+    margin: 0 auto 0px;
     padding: 0 40px;
 }
 
 .rd-paso {
     flex: 1;
     background-color: #ffffff;
-    border: 1px solid #d6d6d6;
     display: flex;
     align-items: center;
     gap: 20px;
     padding: 20px 30px;
     min-height: 118px;
+    
+}
+
+.rd-paso1{
+    
 }
 
 .rd-paso:first-child {
-    border-radius: 12px 0 0 12px;
+
 }
 
 .rd-paso:last-child {
-    border-radius: 0 12px 12px 0;
+
 }
 
 .rd-paso-activo {
     background-color: #f5f5f5;
+}
+
+.rd-paso1{
+    mask: conic-gradient(from -160deg at right,#0000,#000 1deg 139deg,#0000 140deg) 50%/100% 1648.49px
+}
+
+.rd-paso2{
+    background-color: #e7e7e7;
+    /* LA MASCARA AL FINAL DEL PASO*/
+    mask: conic-gradient(from -160deg at right,#0000,#000 1deg 139deg,#0000 140deg) 50%/100% 1648.49px;
+    display: absolute;
+}
+
+.rd-paso3{
+
 }
 
 .rd-paso-numero {
@@ -152,7 +171,6 @@
 
 .rd-creador {
     display: flex;
-    gap: 30px;
     max-width: 1700px;
     margin: 0 auto 60px;
     padding: 0 40px;
@@ -162,7 +180,6 @@
 
 .rd-canasta {
     background-color: #d4d2d2;
-    border-radius: 12px;
     width: 506px;
     flex-shrink: 0;
     padding: 24px;
@@ -196,6 +213,7 @@
     flex-direction: column;
     gap: 12px;
     margin-bottom: 16px;
+    
 }
 
 .rd-canasta-item {
@@ -317,7 +335,6 @@
 .rd-productos {
     flex: 1;
     background-color: #d9d9d9;
-    border-radius: 12px;
     padding: 24px;
 }
 
@@ -399,13 +416,13 @@
 }
 
 .rd-producto-nombre {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     color: #1a1a1a;
 }
 
 .rd-producto-sabor {
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 600;
     color: #1a1a1a;
     min-height: 18px;
@@ -447,7 +464,7 @@
 }
 
 .rd-destacados-titulo {
-    font-size: 48px;
+    font-size: 64px;
     font-weight: 800;
     color: #1a1a1a;
     text-align: center;
@@ -492,21 +509,21 @@
 }
 
 .rd-destacado-info h3 {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 500;
     color: #1a1a1a;
     margin-bottom: 4px;
 }
 
 .rd-destacado-info p {
-    font-size: 20px;
+    font-size: 32px;
     font-weight: 500;
     color: #1a1a1a;
     margin-bottom: 8px;
 }
 
 .rd-destacado-precio {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 900;
     color: #1a1a1a;
 }
