@@ -108,6 +108,13 @@
     
 }
 
+/* PROBANDO EL SCROLL */
+.rd-toallitems{
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+
 .rd-paso1{
     
 }
